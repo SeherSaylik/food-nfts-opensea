@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "live-server": "^1.2.1",
     "moralis": "^0.0.176",
     "web3": "^1.6.1"
   }
