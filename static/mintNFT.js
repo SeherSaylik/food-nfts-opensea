@@ -1,4 +1,5 @@
 const nft_contract_address = "0x10636c9DAE899ED37D9669E83edDd866b0b6688B" 
+// nft_contract_matic_mainnet= "0xD2A980a1b60D936A911Dd27290C5F36847F6B177"
 
 initializeWeb3()
 const web3 = new Web3(window.ethereum);
@@ -12,10 +13,10 @@ async function initializeWeb3(){
 async function mintFood(){
     const characterIndex = 0;
     const character = await mapCharacter(characterIndex);
-    const characterName = "sample"
+    const characterName = "Food"
     const metadata = {
         "name":characterName,
-        "image":"https://ipfs.moralis.io:2053/ipfs/QmXy9zdLANKhL8NuQ8TtuH72qhyw4a5JCYDyqDKopP6kEm",
+        "image":"https://ipfs.moralis.io:2053/ipfs/QmRowxZmntDM5veEhfZFd7J8cbgSCqCMH7RpqBRFwJ7uKG",
     }
     const metadataFile = new Moralis.File("metadata.json", {base64 : btoa(JSON.stringify(metadata))});
     await metadataFile.saveIPFS();
